@@ -11,6 +11,11 @@ void main(){
 	int *vet1;
 	printf("Entre com o valor da quantidade de numeros que serao colocados em teste : ");
 	scanf("%d",&n);
+		while(n<=0){ // while de segurança caso o usuario  coloque um valor de n diferente de n>0;
+		system("cls");
+		printf("O valor de entrada para a quantidade de numeros  \ndeve ser um valor  maior que zero ,por favor digite novamente o valor de n:\n");
+		scanf("%d",&n);
+	}
 	vet1  = (int *)malloc(sizeof(int)*n);
 	system("cls");
 	printf("Entre com os valores inteiros que serao estudados,\nseparado-os por espaco:\n\n");

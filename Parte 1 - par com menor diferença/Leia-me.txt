@@ -1,0 +1,7 @@
+1º - Para funcionar  o programa é necessário , primeiramente , inserir a quantidade  de valores que serão  utilizados;
+
+O valor da quantidade de  numeros deve ser no mínimo 1;
+
+Depois de colocado a quantidade de valores entrados o  usuário deve inserir os valores desejados  para o estudo,  separando-os por " espaço" (tecla espaço);
+
+O  programa irá encontrar o par ordenado dentre os valores inseridos que possui a menor diferença;

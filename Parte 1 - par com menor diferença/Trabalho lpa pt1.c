@@ -6,10 +6,16 @@ void diferenciador(int v[],int tamvet);
 
 
 void main(){
+	
 	int n,k=0;
 	int *vet1;//ponteiro pois o tamanho nao eh definido ainda
 	printf("Entre com o valor da quantidade de numeros que serao colocados em teste : ");
 	scanf("%d",&n);
+	while(n<=0){// while de segurança caso o usuario  coloque um valor de n diferente de n>0;
+		system("cls");
+		printf("O valor de entrada para a quantidade de numeros  \ndeve ser um valor  maior que zero ,por favor digite novamente o valor de n:\n");
+		scanf("%d",&n);
+	}
 	vet1  = (int *)malloc(sizeof(int)*n);
 	system("cls");
 	printf("Entre com os valores inteiros que serao estudados,separado-os por espaco:\n\n");
@@ -70,6 +76,7 @@ void diferenciador(int v[],int tamvet){
 	}
 		
 	if(tamvet<3){
+		j=i+1;
 		printf("Como existe apenas um par de valores ele proprio possui\n a menor diferenca :");	
 	
 	printf("\n\n\aO par ,formado pelos valores, com a menor diferenca eh : (%d,%d)",v[i],v[j]);
