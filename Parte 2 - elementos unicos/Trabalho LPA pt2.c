@@ -68,10 +68,14 @@ void identificador(int vetor[],int tamvet){
 		}
 		for(q;q<tamvet;q++){
 			k = vetor[q] - vetu[q];//realiza a subtração vetorial para eliminar os repetidos
+			if(vetor[q]!=0 && k!=0){//para restringir  o caso especial em que  o elemento unico é o valor zero;
 			if(k!= 0){ // imprime os valores que são != 0  , ou seja, não repetidos , unicos
 				printf("%d ",vetor[q]);
 				w++; // cria contador para verificar os casos em q nao existem elementos unicos;
 			}
+		} if(vetor[q]!= vetor[q+1]&&vetor[q]==0){ // caso especial em que o elemento unico é o zero;
+			printf("%d ",vetor[q]);
+		}
 		}
 			if(w==0){  
 				printf("\aNao existem elementos unicos no conjunto!");				
