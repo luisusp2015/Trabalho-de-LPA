@@ -51,7 +51,7 @@ void diferenciador(int v[],int tamvet){
 	int k=0;
 	int *menores,h,w,c,j;//criou-se um vet "menores" com alocação dinamica .
 	
-	menores = (int*)malloc(sizeof(int)*tamvet);//aloca dinamicamente
+	menores = (int*)malloc(sizeof(int)*tamvet-1);//aloca dinamicamente
 	
 	if(tamvet>=3){
 		c = tamvet-1 ;
@@ -62,7 +62,7 @@ void diferenciador(int v[],int tamvet){
 		    menores[i] = w;
 		}
 		
-		insertionsort(menores,tamvet);
+		insertionsort(menores,tamvet-1);
 	
 	
 		i=0;
