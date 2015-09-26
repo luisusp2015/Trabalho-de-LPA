@@ -1,0 +1,16 @@
+1º - Para funcionar  o programa é necessário , primeiramente , inserir a quantidade n de valores que serão  utilizados,teclando "Enter em seguida";
+
+2º - Depois de colocado a quantidade de valores entrados o  usuário deve inserir os valores desejados  para o estudo,  separando-os por " espaço" (tecla espaço),teclando "Enter" em seguida;
+
+3º - O  programa irá encontrar os valores unicos dentre os valores inseridos e "imprimi-los" na tela;
+
+4º - EXEMPLOS:
+Exemplo i)
+    1º - o usuario digita 6 para a quantidade de números
+    2º - em seguida o usuário inseri os valore : 5,12,3,13,1,99;
+    3º - o programa irá imprimir na tela do computador os valores :1 ,3 ,5 ,12 ,13 ,99 ;
+
+Exemplo ii)
+    1º - o usuario digita 4 para a quantidade de números
+    2º - em seguida o usuário inseri os valores : 0,0,3,-4,3,123;
+    3º - o programa irá imprimir na tela do computador o valor : -4;
