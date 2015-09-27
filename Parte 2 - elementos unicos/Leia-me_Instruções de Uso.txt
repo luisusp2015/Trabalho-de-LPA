@@ -13,4 +13,4 @@ Exemplo i)
 Exemplo ii)
     1º - o usuario digita 4 para a quantidade de números
     2º - em seguida o usuário inseri os valores : 0,0,3,-4,3,123;
-    3º - o programa irá imprimir na tela do computador o valor : -4;
+    3º - o programa irá imprimir na tela do computador os valores : -4 , 123;

@@ -60,29 +60,23 @@ void identificador(int vetor[],int tamvet){
 		printf("O(s) valor(es) unico(s) eh(sao) :\n");
 		
 		for(i;i<tamvet;i++){
-			j = i+1 ; 
-			if(vetor[i]==vetor[j]){//cria um vetor formado pelos valores repetidos em suas respectivas posições de origem
-				vetu[i] = vetor[i];
-				vetu[j] = vetor[i];
-			}	
-		}
-		for(q;q<tamvet;q++){
-		    r = q+1;
-		    if(vetor[q]==0){
+		if(i==0){
+			if(vetor[0]!=vetor[1]){ // compara o primeiro com o segundo;
+				printf("%d ",vetor[0]);w++;
 			}
-			k = vetor[q] - vetu[q];//realiza a subtração vetorial para eliminar os repetidos
-			if(vetor[q]!=0 && k!=0){//para restringir  o caso especial em que  o elemento unico é o valor zero;
-				printf("%d ",vetor[q]);// imprime os valores que são != 0  , ou seja, não repetidos , unicos
-				w++; // cria contador para verificar os casos em que nao existem elementos unicos;
-			}		
-				if(vetor[q] != vetor[r] && vetor[q]!=vetor[r+1]){
-		             if( vetor[q]==0){ // caso especial em que o elemento unico é o zero;
-			             printf("%d ",vetor[q]);
-			             }
-	
+		}
+		if(i>=1&& i<tamvet-1){ // compara o termo com seu visinho a esquerda e a direita;
+			if(vetor[i]!=vetor[i+1]&&vetor[i-1]!=vetor[i]){
+				printf("%d ",vetor[i]);w++;
+			}
+		}
+		if(i==tamvet-1){ // compara o ultimo com o penultimo;
+			if(vetor[i]!=vetor[i-1]){
+				printf("%d ",vetor[i]);w++;
+			}
 		}
 	}
-			if(w==0){  
+			if(w==0){  // caso especial em que não existem valores unicos;
 				printf("\aNao existem elementos unicos no conjunto!");				
 			}
 				
