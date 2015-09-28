@@ -49,16 +49,16 @@ void insertionsort(int vet[],int tam){
 }
 
 void diferenciador(int v[],int tamvet){
-	int i=0;//criou-se contares i e k ;
+	int i=0;//criou-se contadores i e k ;
 	int k=0;
-	int *menores,h,w,c,j;//criou-se um vet "menores" com alocação dinamica .
+	int *menores,h,w,c,j;//criou-se um vet "menores" com alocação dinamica , para armazenar o valor das diferenças
 	
 	menores = (int*)malloc(sizeof(int)*tamvet-1);//aloca dinamicamente
 	
 	if(tamvet>=3){
 		c = tamvet-1 ;
 		printf("O(s) par(es) com a menor diferenca eh(sao): \n ");
-		for(i;i<c;i++){
+		for(i;i<c;i++){ // irá percorrer o vetor realizando a diferença dos pares consecutivos e armazenando essa diferença no vetor menores
 			j=i+1;
 			w = v[j] - v[i];
 		    menores[i] = w;
@@ -68,7 +68,7 @@ void diferenciador(int v[],int tamvet){
 	
 	
 		i=0;
-		for(i;i<c;i++){
+		for(i;i<c;i++){//lê novamente o vetor realizando a diferença dos consecutivos  , só que imprimindo aqueles  pares cuja diferença é igual a "h";
 			j=i+1;
 			h = v[j] - v[i];
 			if(h == menores[0]){
@@ -77,7 +77,7 @@ void diferenciador(int v[],int tamvet){
 		}
 	}
 		
-	if(tamvet<3){
+	if(tamvet<3){// caso especial em que existe apenas um par
 		j=i+1;
 		printf("Como existe apenas um par de valores ele proprio possui\n a menor diferenca :");	
 	

@@ -110,4 +110,5 @@ void identificador(int vetor[],int tamvet){
 			p=0;
 		}
 	}
+	free(w);//desaloca o vetor w;
 }
