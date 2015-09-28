@@ -6,6 +6,7 @@ void identificador(int vetor[],int tamvet);
 
 
 void main(){
+	printf("                  ELEMENTOS UNICOS         \n\n\n\n");
 	int n,k=0;
 	int *vet1;
 	printf("Entre com o valor da quantidade de numeros que serao colocados em teste : ");
@@ -26,6 +27,8 @@ void main(){
 	insertionsort(vet1,n);//Ordena o vetor dos valores
 		
 	identificador(vet1,n);//checa quais são os valores unicos e os imprime.
+	
+	free(vet1);//desaloca vetor vet1
 	getch();
 }
 
@@ -46,9 +49,7 @@ void insertionsort(int vet[],int tam){
 
 void identificador(int vetor[],int tamvet){
 	int i=0;
-	int q=0;
 	int w=0;
-	int k,j , r;
 	int *vetu;
 	vetu = (int*)calloc(tamvet,sizeof (int));//usando o calloc para preencher os espaços vazios com o valor 0;
 	/* iremos separar a situação em 2 casos
@@ -86,7 +87,6 @@ void identificador(int vetor[],int tamvet){
 		system("cls");
 		printf("Como existe apenas um valor ele eh unico:\n%d",vetor[0]);
 	}
-	
 	
 	
 	

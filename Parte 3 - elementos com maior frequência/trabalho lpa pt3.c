@@ -7,6 +7,7 @@ void identificador(int vetor[],int tamvet);
 
 
 void main(){
+	printf("                  ELEMENTOS COM MAIOR FRENQUENCIA         \n\n\n\n");
 	int n,k=0;
 	int *vet1;
 	printf("Entre com o valor da quantidade de numeros que serao colocados em teste : ");
@@ -27,6 +28,8 @@ void main(){
 	insertionsort(vet1,n);//Ordena o vetor dos valores
 		
 	identificador(vet1,n);//checa quais são os valores com maior frequencia.
+	free(vet1);//desaloca vetor vet1
+	
 	getch();
 }
 
@@ -63,9 +66,9 @@ void insertion(int vt[],int tm){//ordena o vetor em ordem decrescente
 
 void identificador(int vetor[],int tamvet){
 	
-	int q=0;int g=0;int p=0;int i=0;int k=0;int j=0;
+	int q=0;int p=0;int i=0;
 	int *w;
-	int h,c,o,u;
+	int h,u,c;
 	
 	w=(int*)calloc(tamvet,sizeof(int));//cria o vetor w
 	

@@ -6,7 +6,7 @@ void diferenciador(int v[],int tamvet);
 
 
 void main(){
-	
+	printf("                  Pares com a menor diferenca         \n\n\n\n");
 	int n,k=0;
 	int *vet1;//ponteiro pois o tamanho nao eh definido ainda
 	printf("Entre com o valor da quantidade de numeros que serao colocados em teste : ");
@@ -27,6 +27,8 @@ void main(){
 	insertionsort(vet1,n);//Ordena o vetor dos valores
 		
 	diferenciador(vet1,n);//checa qual par tem a menor diferença
+	
+	free(vet1);//desaloca o vetor vet1
 	
 	getch();
 }
@@ -55,7 +57,7 @@ void diferenciador(int v[],int tamvet){
 	
 	if(tamvet>=3){
 		c = tamvet-1 ;
-		printf("O(s) menor(es) par(es) eh(sao): \n ");
+		printf("O(s) par(es) com a menor diferenca eh(sao): \n ");
 		for(i;i<c;i++){
 			j=i+1;
 			w = v[j] - v[i];
@@ -82,7 +84,7 @@ void diferenciador(int v[],int tamvet){
 	printf("\n\n\aO par ,formado pelos valores, com a menor diferenca eh : (%d,%d)",v[i],v[j]);
     }
 	
-	
+	free(menores);//desaloca o vetor menores
 }
 
 
